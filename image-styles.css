@@ -1,0 +1,117 @@
+/* Image Styles */
+
+/* Image Section */
+.image-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+    width: 100%;
+}
+
+.image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.graduation-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover .graduation-image {
+    transform: scale(1.05);
+}
+
+/* Image Overlay */
+.image-overlay {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #BBEDF2;
+    color: #E098AE;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    animation: pulse 2s infinite;
+    box-shadow: 0 5px 15px rgba(187, 237, 242, 0.4);
+}
+
+/* Loading Animation */
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.image-container.loaded::before {
+    display: none;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Responsive Image Styles */
+@media (max-width: 768px) {
+    .image-container {
+        max-width: 350px;
+    }
+    
+    .image-overlay {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        max-width: 300px;
+    }
+    
+    .image-overlay {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .image-container {
+        max-width: 250px;
+    }
+    
+    .image-section {
+        margin-bottom: 20px;
+    }
+} 

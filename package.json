@@ -1,0 +1,22 @@
+{
+  "name": "graduation-web",
+  "version": "1.0.0",
+  "description": "Cute and lovely graduation web page",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "dev": "live-server --port=3000 --open=/index.html"
+  },
+  "keywords": [
+    "graduation",
+    "web",
+    "vietnamese",
+    "cute",
+    "lovely"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+} 

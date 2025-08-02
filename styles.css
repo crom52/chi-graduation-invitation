@@ -1,0 +1,16 @@
+/*
+ * CSS styles have been separated into multiple files for better organization:
+ * 
+ * 1. common-styles.css - Reset, layout, animations, and responsive design
+ * 2. background-styles.css - Background colors and card styling
+ * 3. text-styles.css - All text styling and typography
+ * 4. element-styles.css - Buttons, graduation cap, and decorative elements
+ * 
+ * Please use the individual files instead of this one.
+ * 
+ * Import order in HTML:
+ * 1. common-styles.css
+ * 2. background-styles.css  
+ * 3. text-styles.css
+ * 4. element-styles.css
+ */

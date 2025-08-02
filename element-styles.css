@@ -1,0 +1,132 @@
+/* Button and Element Styles */
+
+/* Graduation Cap */
+.graduation-cap {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.graduation-cap i {
+    font-size: 2.5rem;
+    color: #E098AE;
+    animation: bounce 2s infinite;
+}
+
+/* Direction Button */
+.direction-btn {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    background: #E098AE !important;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(224, 152, 174, 0.3);
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.direction-btn:hover {
+    background: #d0859a !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(224, 152, 174, 0.4);
+    color: white !important;
+    text-decoration: none;
+}
+
+.direction-btn:active {
+    transform: translateY(0);
+}
+
+.direction-btn i {
+    font-size: 1rem;
+}
+
+.direction-btn span {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* Location Section */
+.location-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Decorative Elements */
+.decorative-elements {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.decoration-line {
+    width: 60px;
+    height: 2px;
+    background: #BBEDF2;
+    border-radius: 1px;
+}
+
+.decoration-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.decoration-dots span {
+    width: 8px;
+    height: 8px;
+    background: #E098AE;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.decoration-dots span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.decoration-dots span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* Responsive element adjustments */
+@media (max-width: 480px) {
+    .graduation-cap {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .graduation-cap i {
+        font-size: 2rem;
+    }
+    
+    .decoration-line {
+        width: 40px;
+    }
+    
+    .decoration-dots span {
+        width: 6px;
+        height: 6px;
+    }
+    
+    .direction-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+} 

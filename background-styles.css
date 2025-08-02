@@ -1,0 +1,87 @@
+/* Background Styles */
+body {
+    background: #E098AE;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Invitation Card Background */
+.invitation-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.invitation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(224, 152, 174, 0.05) 0%, rgba(187, 237, 242, 0.05) 100%);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Graduation Cap Background */
+.graduation-cap {
+    background: #BBEDF2;
+    box-shadow: 0 10px 30px rgba(187, 237, 242, 0.4);
+}
+
+/* Date Section Background Borders */
+.date-section {
+    /* border-bottom: 2px solid #BBEDF2; */
+}
+
+/* Responsive background adjustments */
+@media (max-width: 768px) {
+    .invitation-card {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .invitation-card {
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .invitation-card {
+        padding: 20px 10px;
+    }
+}
+
+/* Landscape orientation background adjustments */
+@media (max-height: 600px) and (orientation: landscape) {
+    .invitation-card {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 360px) and (orientation: landscape) {
+    .invitation-card {
+        padding: 15px 10px;
+    }
+} 
