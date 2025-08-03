@@ -82,7 +82,7 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0;
 }
 
 .parking-column {
@@ -140,7 +140,7 @@
     align-items: center;
     gap: 15px;
     margin-top: 0;
-    padding-left: 10px;
+    padding-left: 0;
 }
 
 .contact-section .phone-title {
@@ -275,7 +275,7 @@
     .parking-section {
         max-width: 100%;
         gap: 8px;
-        padding: 0 5px;
+        padding: 0;
     }
     
     .phone-title {
@@ -293,12 +293,12 @@
     
     .contact-section {
         gap: 10px;
-        padding-left: 15px;
+        padding-left: 0;
     }
     
     .contact-section .phone-title,
     .contact-section .phone-number {
-        font-size: 0.65rem;
+        font-size: 0.55rem;
     }
     
     .right-parking {
@@ -364,7 +364,7 @@
     .parking-section {
         max-width: 100%;
         gap: 6px;
-        padding: 0 3px;
+        padding: 0;
     }
     
     .phone-title {
@@ -386,10 +386,12 @@
     
     .date-section {
         gap: 2px;
+        padding: 0 3px;
     }
     
     .left-column, .right-column {
-        max-width: 80px;
+        max-width: 70px;
+        margin: 0 3px;
     }
     
     .center-column {
@@ -404,7 +406,7 @@
 @media (max-width: 360px) {
     .parking-section {
         gap: 5px;
-        padding: 0 2px;
+        padding: 0;
     }
     
     .left-parking {
@@ -470,7 +472,7 @@
     .parking-section {
         max-width: 100%;
         gap: 8px;
-        padding: 0 5px;
+        padding: 0;
     }
     
     .phone-title {
@@ -492,10 +494,12 @@
     
     .date-section {
         gap: 3px;
+        padding: 0 5px;
     }
     
     .left-column, .right-column {
-        max-width: 90px;
+        max-width: 80px;
+        margin: 0 5px;
     }
     
     .center-column {
@@ -514,6 +518,9 @@
     align-items: center;
     margin-bottom: 30px;
     gap: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 .date-column {
@@ -526,8 +533,9 @@
 .left-column, .right-column {
     flex: 1;
     max-width: 120px;
+    min-width: 0;
     position: relative;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 .left-column .decoration-line, .right-column .decoration-line {
@@ -541,6 +549,7 @@
     flex: 2;
     text-align: center;
     max-width: max-content;
+    min-width: 0;
 }
 
 .day-of-week, .time {
