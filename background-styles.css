@@ -1,6 +1,7 @@
 /* Background Styles */
 body {
-    background: #E098AE;
+    background: url('asset/IMG_7114.jpg') no-repeat center center fixed;
+    background-size: cover;
     min-height: 100vh;
     overflow: auto;
 }
