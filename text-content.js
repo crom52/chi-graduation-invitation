@@ -29,7 +29,7 @@ const TEXT_CONTENT = {
     parkingLocation2: "- SỐ 3, CÔNG TRƯỜNG QUỐC TẾ, P6, Q3, TPHCM",
 
     // Image
-    imageUrl: "https://i.ytimg.com/vi/vH8kYVahdrU/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDupXZrUT00Q1ru06NV2vi3rMfp0w"
+    imageUrl: "asset/avatar_2.jpg"
 };
 
 // Export for use in other files

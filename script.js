@@ -47,28 +47,54 @@ $(document).ready(function() {
         window.open(mapsUrl, '_blank');
     });
 
-    // Add confetti effect on page load
+    // Add flower confetti effect on page load
     function createConfetti() {
-        const colors = ['#E098AE', '#BBEDF2', '#FFD0A6', '#FF69B4'];
-        const confettiCount = 30;
+        const flowers = [
+            'asset/flower/tulip_1.png',
+            'asset/flower/tulip_3.png',
+            'asset/flower/chamomile.png'
+        ];
+        const confettiCount = 12;
         
         for (let i = 0; i < confettiCount; i++) {
             const confetti = $('<div class="confetti"></div>');
-            const color = colors[Math.floor(Math.random() * colors.length)];
-            const left = Math.random() * 100;
+            const flower = flowers[Math.floor(Math.random() * flowers.length)];
+            
+            // Random position for left or right side only
+            let left;
+            if (Math.random() < 0.5) {
+                // Left side: 0% to 25%
+                left = Math.random() * 25;
+            } else {
+                // Right side: 75% to 100%
+                left = 75 + Math.random() * 25;
+            }
+            
             const animationDelay = Math.random() * 3;
             const animationDuration = Math.random() * 3 + 2;
             
+            // Responsive flower size
+            let size;
+            if (window.innerWidth <= 767) {
+                // Mobile: 15-20px
+                size = Math.random() * 5 + 15;
+            } else {
+                // Desktop/Tablet: 20-40px
+                size = Math.random() * 20 + 20;
+            }
+            
             confetti.css({
                 'position': 'fixed',
-                'width': '8px',
-                'height': '8px',
-                'background': color,
+                'width': size + 'px',
+                'height': size + 'px',
+                'background-image': `url(${flower})`,
+                'background-size': 'contain',
+                'background-repeat': 'no-repeat',
+                'background-position': 'center',
                 'left': left + '%',
-                'top': '-10px',
+                'top': '-20px',
                 'z-index': '9999',
                 'pointer-events': 'none',
-                'border-radius': '50%',
                 'animation': `fall ${animationDuration}s linear ${animationDelay}s infinite`
             });
             

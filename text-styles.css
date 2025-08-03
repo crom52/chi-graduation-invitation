@@ -249,11 +249,11 @@
     }
     
     .day-of-week, .time {
-        font-size: 1rem;
+        font-size: 0.75em !important;
     }
     
     .day-number, .month {
-        font-size: 1.5rem;
+        font-size: 1.3rem !important;
     }
     
     .university {
@@ -338,11 +338,11 @@
     }
     
     .day-of-week, .time {
-        font-size: 0.9rem;
+        font-size: 0.75em !important;
     }
     
     .day-number, .month {
-        font-size: 1.3rem;
+        font-size: 1.1rem !important;
     }
     
     .university {
@@ -428,6 +428,10 @@
     .phone-number {
         font-size: 0.45rem;
     }
+    
+    .day-of-week, .time {
+        font-size: 0.75em !important;
+    }
 }
 
 /* Landscape orientation text adjustments */
@@ -446,11 +450,11 @@
     }
     
     .day-of-week, .time {
-        font-size: 1rem;
+        font-size: 0.75em !important;
     }
     
     .day-number, .month {
-        font-size: 1.4rem;
+        font-size: 1.2rem !important;
     }
     
     .university {
@@ -543,6 +547,13 @@
     height: 2px;
     background: #BBEDF2;
     margin: 5px 0;
+}
+
+/* Mobile decoration line styles */
+@media (max-width: 767px) {
+    .left-column .decoration-line, .right-column .decoration-line {
+        background: #8B0000;
+    }
 }
 
 .center-column {
