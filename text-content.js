@@ -11,9 +11,9 @@ const TEXT_CONTENT = {
 
     // Event details
     dayOfWeek: "CHỦ NHẬT",
-    time: "19:00",
+    time: "16:00",
     month: "THÁNG 8",
-    day: "NGÀY 20",
+    day: "NGÀY 10",
     year: "2025",
 
     // Location
